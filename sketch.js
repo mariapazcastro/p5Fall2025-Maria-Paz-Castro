@@ -1,7 +1,7 @@
-let flowers
+let tree
 
 function preload(){
-  flowers = loadImage("DSC_0330 copy.JPG")
+  tree = loadImage("tree.png")
 }
 
 function setup() {
@@ -111,5 +111,5 @@ function draw() {
   ellipse(80,170,50,50)
   ellipse(120,170,50,50)
 
-  image(flowers, windowWidth/1.25,windowHeight/1.25, 80,80)
+  image(tree, windowWidth/1,windowHeight/1, 400,400)
 }
