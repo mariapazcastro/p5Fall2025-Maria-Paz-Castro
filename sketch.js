@@ -1,7 +1,6 @@
 let tree
-
 function preload(){
-  tree = loadImage("tree.png")
+  tree =loadImage("tree.png")
 }
 
 function setup() {
@@ -9,7 +8,14 @@ function setup() {
 }
 
 function draw() {
-  background(149, 198, 237);
+   if(mouseX>width/2 && mouseY>height/2){
+   background(101, 205, 240);
+  }else{
+   background(149, 198, 237)
+
+  }
+  
+  image(tree, windowWidth/1.30,windowHeight/1.30, 400,400)
   
   //ground rectangle
   fill(51, 97, 51)
@@ -88,7 +94,19 @@ function draw() {
   strokeWeight(1)
   rect(width/1.25,height/1.22,55,60)
   
-  //ellipse style
+  if(keyIsPressed == true){
+    fill(242, 195, 41)
+  stroke(242, 195, 41)
+  ellipse(250,60,100,100)
+  strokeWeight(10)
+  line( 310,60,340,60)
+  line(300,90,330,105)
+  line(280,110,295,130)
+  line(250,120,250,150)
+  line(185,60,155,60)
+  line(190,90,165,100)
+  line(210,115,190,140)
+    }else{
   fill(242, 195, 41)
   stroke(242, 195, 41)
   ellipse(250,60,100,100)
@@ -97,10 +115,11 @@ function draw() {
   line(300,90,330,105)
   line(280,110,295,130)
   line(250,120,250,150)
-  line(185,60,155,60)
+  line(185,60,155,60) 
   line(190,90,165,100)
   line(210,115,190,140)
-  
+    }
+      
   //elipse style
   fill(202, 226, 237)
   stroke(202, 226, 237)
@@ -110,6 +129,6 @@ function draw() {
   ellipse(100,150,50,50)
   ellipse(80,170,50,50)
   ellipse(120,170,50,50)
-
-  image(tree, windowWidth/1,windowHeight/1, 400,400)
+  
+  
 }
