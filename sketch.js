@@ -1,6 +1,6 @@
 let tree
 function preload(){
-  tree =loadImage("tree.png")
+  tree =loadImage("treeEditado.png")
 }
 
 function setup() {
@@ -15,7 +15,7 @@ function draw() {
 
   }
   
-  image(tree, 100,100, 400,400)
+  image(tree, 1, 185, 400,400)
   
   //ground rectangle
   fill(51, 97, 51)
@@ -73,6 +73,7 @@ function draw() {
   ellipse(305,550,60,40)
   
   //triangle style
+  if(keyIsPressed == false){
   fill(214, 162, 73)
   stroke(214, 162, 73)
   strokeWeight(1)
@@ -83,7 +84,8 @@ function draw() {
   strokeWeight(3)
   stroke(25, 105, 9)
   line(280,415,300,415)
-  
+  }
+
   //rect style
   noFill()
   stroke(15, 15, 15)
