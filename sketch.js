@@ -15,7 +15,7 @@ function draw() {
 
   }
   
-  image(tree, windowWidth/1.30,windowHeight/1.30, 400,400)
+  image(tree, 100,100, 400,400)
   
   //ground rectangle
   fill(51, 97, 51)
