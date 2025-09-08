@@ -1,6 +1,6 @@
 let tree
 function preload(){
-  tree =loadImage("TreeEditado.png")
+  tree =loadImage("treeEditado.png")
 }
 
 function setup() {
