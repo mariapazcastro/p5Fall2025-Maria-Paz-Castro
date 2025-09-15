@@ -47,14 +47,14 @@ function draw(){
 	ellipse(windowWidth/2.1, windowHeight/2.4, 10,15)
 
 
-	//if day is true draw day function
+	//if sun is true draw sun function
 	if(sunBool == true){
 		
 			sunScene()
 		
 	}
 
-	//if night is true draw night function
+	//if grow tree is true draw tree function
 	if(growBool == true){
 		
 			treeScene()
@@ -64,12 +64,7 @@ function draw(){
 }
 
 
-//pretend that these are individual sketches/drawings/scenes and
-//you're flipping between them
-
-
 function sunScene(){
-	//add as much as you want to this function!
 	background(136, 207, 227)
 	fill(245, 218, 15)
 	ellipse(windowWidth/2, windowHeight/4, 200, 200)
@@ -80,7 +75,6 @@ function sunScene(){
 }
 
 function treeScene(){
-	//add as much as you want to this function!
 	background(136, 207, 227)
 	fill(8, 140, 19)
 	rect(width/500, height/1.15, 2000,90)
@@ -93,13 +87,11 @@ function treeScene(){
 
 
 function keyPressed(){
-	//pressing d flips day to true and night to false
 	if(key === 's'){
 		sunBool = true
 		growBool = false
 	
 	}
-	//pressing d flips night to true and day to false
 	if(key === 'g'){
 		sunBool = false
 		growBool = true
