@@ -4,7 +4,7 @@
 	let SmallTree
 
 	function preload(){
-	  tree =loadImage("treeEditado.png")
+	  tree =loadImage("TreeEditado.png")
 		SmallTree = loadImage("BabyTree.png")
 	}
 	
