@@ -2,11 +2,11 @@
 
 let tree
 
-//position of furby
+//position of tree
 let treeX
 let treeY
 
-//furby speed
+//tree speed
 let treeXspeed = 3
 let treeYspeed = 3
 
