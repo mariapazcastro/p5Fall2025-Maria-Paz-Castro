@@ -80,8 +80,13 @@ function level1Game(){
 	if (frameCount % 60 == 0 && timer > 0) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
     	timer --;
   	}
+ 
+  	//if the timer is zero, switch to level 2 and 
+  	//reset the timer to 5 for the next level
   	if (timer == 0) {
-    	
+    	level1Bool = false 
+		level2Bool = true
+		timer = 5
   	}
 
   	//main game
@@ -111,15 +116,18 @@ function level1Game(){
 		//woodyYspeed = woodyYspeed * 1.3
 	}
 
-	if(score == 5){
-		level1Bool = false 
-		level2Bool = true
-	}
+	//resetting the score and timer variable
+
+	// if(score == 5){
+	// 	level1Bool = false 
+	// 	level2Bool = true
+	// 	timer = 5
+	// }
 
 }
 
 function level2Game(){
-
+	
 	image(toystory2, windowWidth/2, windowHeight/2, windowWidth, windowHeight)
 	textSize(40)
 	text("Tag Buzz! Your score is: "+ score +" points!", 10,100)
@@ -129,7 +137,12 @@ function level2Game(){
 	if (frameCount % 60 == 0 && timer > 0) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
     	timer --;
   	}
+
+  	//if the timer is zero, switch to the last screen
   	if (timer == 0) {
+
+  		level2Bool = false 
+		winGameBool = true
     	
   	}
   	//main game
@@ -157,10 +170,11 @@ function level2Game(){
 		buzzYspeed = buzzYspeed * 1.3
 	}
 
-	if(score == 5){
-		level2Bool = false 
-		winGameBool = true
-	}
+	// if(score == 5){
+		
+  	// 	level2Bool = false 
+	// 	winGameBool = true
+	// }
 
 }
 
@@ -171,8 +185,8 @@ function winGame(){
 	textSize(40)
 	text("You win!", 10, 100)
 
-	image(woody, windowWidth/2, windowHeight/2, 200,200)
-	image(buzz, windowWidth/3, windowHeight/2, 200,200)
+	image(woody, windowWidth/1.5, windowHeight/2, 200,200)
+	image(buzz, windowWidth/2.5, windowHeight/2, 200,200)
 
 }
 
